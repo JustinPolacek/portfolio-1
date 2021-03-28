@@ -18,6 +18,12 @@ a{
  font-family: 'Poppins', sans-serif;;
 }
 
+h2{
+  font-size: 2.7rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
 
 
 /* NAV-BAR STYLES */
@@ -45,7 +51,7 @@ a{
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid rgba(255,255,255,.05);
-    transition: height .5s ease;
+    transition: height 1s ease;
     letter-spacing: 2px;
 }
 
@@ -62,13 +68,13 @@ a{
     font-weight: 800;
     letter-spacing: 3px;
     font-family: 'Roboto', sans-serif;
-    color: #2f8686;
+    color: slategray;
   
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 534px){
   .nav .logo{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -85,16 +91,16 @@ a{
 }
 
 .nav-link::after{
-    content: '';
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .5s ease;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s ease;
 }
 
 .nav-link:hover::after{
@@ -126,7 +132,7 @@ a{
 
 /*Apply styles after scroll*/
 .scrolling-active{
-    background-color: white;
+ background-color: white;
   box-shadow: 0 3px 1rem rgba(0,0,0,.1);
 }
 
@@ -136,6 +142,10 @@ a{
 
 .scrolling-active .nav a{
   color: black;
+}
+
+.scrolling-active .nav .logo{
+  color: #2f8686;
 }
 
 .scrolling-active #nav-cta{
@@ -150,6 +160,10 @@ a{
 
 .scrolling-active .nav-link::after{
   background-color: #313131;
+}
+
+.scrolling-active .burger span{
+  background: #2f8686;
 }
 
 /*Apply styles after scroll end*/
@@ -194,7 +208,7 @@ a{
     
   }
   .nav-list{
-    background-color: #024a80;
+    background-color: #2f8686;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -256,6 +270,28 @@ a{
     
 }
 
+.cv{
+  background-color: #2f8686;
+  color: #fff;
+  padding: 1.7rem 2.9rem;
+  border-radius: 10px;
+  transition: background-color .5s ease;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: "Roboto";
+  font-size: 2rem;
+  border: none;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cv:hover{
+  background-color: slategray;
+
+
+}
+
 
 
 
@@ -280,17 +316,21 @@ h3{
     margin-top: 5px;
     letter-spacing: 2px;
     font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
    
 }
 
 @media(max-width: 1340px){
   .logo-2{
-    color: black;
-    display: none;
+    font-size: 3rem;
 }
 h4{
-  display: none;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.cv{
+  padding: 1rem;
+  font-size: 1.8rem;
 }
 }
 
@@ -304,8 +344,7 @@ h4{
     left: 0%;
     bottom: 0%;
     margin: 2em;
-    z-index: 1;
-     
+    z-index: 1; 
   }
   
   .media ul li{
@@ -321,6 +360,12 @@ h4{
     color: white;
     font-size: 50px;
   }
+
+  @media(max-width: 400px){
+    .media ul li a{
+      font-size: 3.5rem;
+    }
+  }
   
   .media ul li a:hover{
     color: #2f8686;
@@ -330,15 +375,169 @@ h4{
 /* ABOUT SECTION */
 
 .about{
-    min-height: 50vh;
-    background-color: lightgrey;
+    min-height: 70vh;
+    background-color: #f1f1f1;
     margin-bottom: 50px;
 }
 
 
+.about-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 80px;
+  
+}
+
+.about-head{
+  font-size: 2.7rem;
+  color:#2f8686;
+  padding: auto;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.about-container h2{
+  font-size: 4rem;
+}
+
+.about-container p{
+  font-weight: 500;
+}
+
+
+.box{
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1 1 40rem;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.box-1 p{
+  font-weight: 400;
+}
+
+@media(max-width: 650px){
+
+  .box-1 p{
+    font-size: 1.4rem;
+  }
+
+  .box-2  .skills .skill-3{
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+
+  .projects p{
+    font-size: 1.6rem;
+  }
+
+  .project-container p{
+    font-size: 1.3rem;
+
+  }
+  
+
+}
+
+
+
+
+.box-1 h2{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.box-2 h2{
+  font-size: 3rem;
+  margin-bottom: 20px;
+
+}
+
+.highlight-intro{
+  margin-top: 20px;
+  color: #2f8686;
+font-weight: 800;  
+font-size: 2.9rem;
+}
+
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+
+}
+
+.skill-1{
+  margin-right: 10px;
+  background-color:rgb(204, 204, 204);
+  padding: 5px 10px;
+}
+.skill-2{
+  margin-right: 10px;
+  background-color:rgb(204, 204, 204);
+  padding: 5px 10px;
+
+}
+
+.skill-3{
+  margin-right: 20px;
+  background-color:#2f8686;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* PROJECT SECTION */
+
+
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 80px;
+
+}
+
+.project-head{
+  font-size: 2.7rem;
+  color:#2f8686;
+  padding: auto;
+  text-transform: uppercase;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+
+
+.project-head h1{
+  font-size: 4rem;
+}
+.project-container h1{
+  font-size: 4rem;
+}
+
+.project-container p{
+  font-weight: 500;
+}
 
 .container-1 {
-  width: 100%;; 
+  width: 100%; 
   margin: auto;
   padding: 0 1rem;
   overflow: auto;
@@ -372,7 +571,7 @@ h4{
  img {
 
   width: 100%;
-  object-fit: fill;
+  height: 100%;
   transition: 1s;
   cursor: pointer;
   justify-content: space-around;
@@ -445,7 +644,150 @@ p{
   .card {
     display: block;
   }
+
+  .card img{
+    height: 400px;
+  }
+
 }
+
+
+
+
+
+/* CONTACT FORM */ 
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+
+
+
+
+.contact-section{
+  background-color: #f1f1f1;
+  min-height: 70vh;
+
+}
+
+
+	
+
+
+.new-container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+  min-height: 70vh;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:fade(#F9F9F9,85);
+	padding:25px;
+	margin:80px 0;
+}
+
+#contact h3 {
+	color: #000;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#2f8686;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:25px 10px;
+	font-size:15px;
+	text-transform: uppercase;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]{ box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+label.error{
+	color: darkred;
+	padding-left: 10px;
+	font-weight: bold;
+}
+input.error{
+	border-color: darkred !important;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -467,13 +809,13 @@ p{
     width:100%;
     margin:1% 0%;
     padding:0.6% 0%;
-    color:gray;
+    color: slategray;
     font-size: 2.5rem;
     }
     
     .footer .row a{
     text-decoration:none;
-    color:gray;
+    color:#2f8686;
     transition:0.5s;
     }
     
