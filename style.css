@@ -575,7 +575,7 @@ font-size: 2.9rem;
   transition: 1s;
   cursor: pointer;
   justify-content: space-around;
-  
+  object-fit: 
 }
 
 
@@ -643,8 +643,9 @@ p{
 @media(max-width:600px) {
   .card {
     display: block;
-  }
+    object-fit: contain;
 
+  }
   .card img{
     height: 400px;
   }
